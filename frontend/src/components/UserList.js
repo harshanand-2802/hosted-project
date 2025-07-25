@@ -96,7 +96,7 @@ const UserList = () => {
                 tabIndex={0}
               >
                 <img
-                  src={u.photo || "https://via.placeholder.com/40"}
+                  src={u.photo || "https://placehold.co/40"}
                   alt={`${u.name}'s profile`}
                   className={styles.userProfilePic}
                 />
@@ -176,7 +176,7 @@ export default UserList;
 //             {allUsers.map(u => (
 //               <li key={u._id} onClick={() => handleUserClick(u)} className="user-list-item" tabIndex={0}>
 //                 <img
-//                   src={u.photo || "https://via.placeholder.com/40"}
+//                   src={u.photo || "https://placehold.co/40"}
 //                   alt={`${u.name}'s profile`}
 //                   className="user-profile-pic"
 //                 />
@@ -228,7 +228,7 @@ export default UserList;
 //               localStorage.setItem("selectedChatUser", JSON.stringify(u));
 //               navigate("/chat/window");
 //             }} className="user-list-item">
-//               <img src={u.photo || "https://via.placeholder.com/40"} alt={`${u.name}`} className="user-profile-pic" />
+//               <img src={u.photo || "https://placehold.co/40"} alt={`${u.name}`} className="user-profile-pic" />
 //               <div className="user-info">
 //                 <div className="user-name">{u.name}</div>
 //                 <div className="user-username">@{u.username}</div>

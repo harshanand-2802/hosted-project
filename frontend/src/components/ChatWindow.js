@@ -198,7 +198,7 @@ const ChatWindow = () => {
           <div key={i} className={`${styles.chatMessage} ${msg.sender._id === user._id ? styles.ownMessage : styles.otherMessage}`}>
             <div className={styles.messageHeader}>
               <div className={styles.senderInfo}>
-                <img src={msg.sender.photo || "https://via.placeholder.com/30"} alt={msg.sender.name} className={styles.messageProfilePic} />
+                <img src={msg.sender.photo || "https://placehold.co/30"} alt={msg.sender.name} className={styles.messageProfilePic} />
                 <span>{msg.sender.name}</span>
               </div>
               {msg.sender._id === user._id && (
@@ -450,7 +450,7 @@ export default ChatWindow;
 //           <div key={i} className={`chat-message ${msg.sender._id === user._id ? "own-message" : "other-message"}`}>
 //             <div className="message-header">
 //               <div className="sender-info">
-//                 <img src={msg.sender.photo || "https://via.placeholder.com/30"} alt={msg.sender.name} className="message-profile-pic" />
+//                 <img src={msg.sender.photo || "https://placehold.co/30"} alt={msg.sender.name} className="message-profile-pic" />
 //                 <span>{msg.sender.name}</span>
 //               </div>
 //               {msg.sender._id === user._id && (

@@ -190,7 +190,7 @@ const Chat = () => {
                   setTargetUser(u);
                   localStorage.setItem("selectedChatUser", JSON.stringify(u));
                 }} className="user-list-item">
-                  <img src={u.photo || "https://via.placeholder.com/40"} alt={`${u.name}'s profile`} className="user-profile-pic" />
+                  <img src={u.photo || "https://placehold.co/40"} alt={`${u.name}'s profile`} className="user-profile-pic" />
                   <div className="user-info">
                     <div className="user-name">{u.name}</div>
                     <div className="user-username">@{u.username}</div>
@@ -209,7 +209,7 @@ const Chat = () => {
               <div key={index} className={`chat-message ${msg.sender._id === user._id ? 'own-message' : 'other-message'}`}>
                 <div className='message-header'>
                   <div className="sender-info">
-                    <img className='message-profile-pic' src={msg.sender.photo || "https://via.placeholder.com/30"} alt={`${msg.sender.name}'s profile`} />
+                    <img className='message-profile-pic' src={msg.sender.photo || "https://placehold.co/30"} alt={`${msg.sender.name}'s profile`} />
                     <span className="sender">{msg.sender.name}</span>
                   </div>
                   {msg.sender._id === user._id && (
@@ -466,7 +466,7 @@ export default Chat;
 //                   setTargetUser(u);
 //                   localStorage.setItem("selectedChatUser", JSON.stringify(u));
 //                 }} className="user-list-item">
-//                   <img src={u.photo || "https://via.placeholder.com/40"} alt={`${u.name}'s profile`} className="user-profile-pic" />
+//                   <img src={u.photo || "https://placehold.co/40"} alt={`${u.name}'s profile`} className="user-profile-pic" />
 //                   <div className="user-info">
 //                     <div className="user-name">{u.name}</div>
 //                     <div className="user-username">@{u.username}</div>
@@ -485,7 +485,7 @@ export default Chat;
 //               <div key={index} className={`chat-message ${msg.sender._id === user._id ? 'own-message' : 'other-message'}`}>
 //                 <div className='message-header'>
 //                   <div className="sender-info">
-//                     <img className='message-profile-pic' src={msg.sender.photo || "https://via.placeholder.com/30"} alt={`${msg.sender.name}'s profile`} />
+//                     <img className='message-profile-pic' src={msg.sender.photo || "https://placehold.co/30"} alt={`${msg.sender.name}'s profile`} />
 //                     <span className="sender">{msg.sender.name}</span>
 //                   </div>
 //                   {msg.sender._id === user._id && (
@@ -723,7 +723,7 @@ export default Chat;
 //                   className="user-list-item"
 //                 >
 //                   <img
-//                     src={u.photo || "https://via.placeholder.com/40"}
+//                     src={u.photo || "https://placehold.co/40"}
 //                     alt={`${u.name}'s profile`}
 //                     className="user-profile-pic"
 //                   />
@@ -750,7 +750,7 @@ export default Chat;
 //                 <div className="sender-info">
 //                   <img
 //                     className='message-profile-pic'
-//                     src={msg.sender.photo || "https://via.placeholder.com/30"}
+//                     src={msg.sender.photo || "https://placehold.co/30"}
 //                     alt={`${msg.sender.name}'s profile`}
 //                   />
 //                   <span className="sender">{msg.sender.name}</span>
