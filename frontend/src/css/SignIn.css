@@ -1,0 +1,33 @@
+.signIn{
+    background-image: url("https://imgs.search.brave.com/QQV3aH0mWHzGkA5is1iGJh5frYq-s35Xnk4z5S2_Fss/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMjQx/Mzc1Ni5qcGc");
+    background-size: cover;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm{
+    background-color: #ffffff9d;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 1px;
+}
+.loginForm2{
+    background-color: #ffffff9d;
+    padding: 20px;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 1px;
+    
+}
+#login-btn{
+    background-color: #1773EA;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 8px;
+}

@@ -1,0 +1,277 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* background-color: var(--background-color, #f9f9f9); */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+}
+
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4a90e2;
+  /* color: white; */
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  padding: 12px 16px;
+  font-weight: bold;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chatBox {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* .chatMessage {
+  width: 300px; 
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  gap: 8px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+} */
+
+.chatMessage {
+  max-width: 40ch; /* Width of ~40 characters */
+  min-width: 40ch;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  gap: 8px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  color: var(--message-text-color);
+}
+
+.ownMessage {
+  align-self: flex-end;
+  /* background-color: #daf1da; */
+  background-color: var(--own-message-bg-color);
+}
+
+.otherMessage {
+  align-self: flex-start;
+  /* background-color: #f1f0f0; */
+  background-color: var(--other-message-bg-color);
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.senderInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.messageProfilePic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.messageText {
+  margin-top: 5px;
+}
+
+.messageTextContent {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--message-text-color);
+}
+
+/* .chatImage {
+  max-width: 200px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 5px;
+} */
+
+.chatImage {
+  width: 100%;         /* Make image fill the container */
+  
+  border-radius: 8px;
+  cursor: pointer;
+  /* object-fit: cover; */
+  margin-bottom: 5px;
+  max-height: 250px;
+  object-fit: contain;
+}
+
+
+.chatInputArea {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  /* border-top: 1px solid #ddd; */
+  /* background-color: #fff; */
+  background-color: var(--input-bg-color);
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+}
+
+.sendButton {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.imagePreviewContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.imagePreview {
+  max-height: 50px;
+  border-radius: 6px;
+}
+
+.cancelPreview {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalImage {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* .emojiPickerContainer {
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+  z-index: 10;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.closeEmojiButton {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+} */
+
+.emojiPickerContainer {
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+  transform: translateX(19%); /* shift left by half width */
+  z-index: 10;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* width: 250px; */
+}
+
+
+.closeEmojiButton {
+  position: absolute; 
+  top: 10px;          
+  right: 10px;         
+  z-index: 11;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  
+}
+
+
+.closeEmojiButton:hover {
+  background: #e03131;
+}
+
+
+
+/* Hide delete button by default */
+.deleteButton {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: red;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show delete button only on hover of the message */
+.chatMessage:hover .deleteButton {
+  opacity: 1;
+}

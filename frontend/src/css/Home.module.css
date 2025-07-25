@@ -1,0 +1,284 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card wrapping each post */
+.card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Top part with profile */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.cardPic img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+}
+
+.cardImage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Post content: likes, caption, comment count */
+.cardContent {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start; /* this aligns everything to the left */
+}
+
+.cardContent p {
+  margin: 5px 0;
+}
+.cardContent .material-symbols-outlined {
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+/* Make red when liked */
+
+.filledHeart {
+  color: red;
+  font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;
+  cursor: pointer;
+}
+
+.outlinedHeart {
+  color: black;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  cursor: pointer;
+}
+
+.cardContent .material-symbols-outlined:hover {
+  color: #999;
+}
+
+/* Comment input area */
+.addComment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-top: 1px solid #eee;
+}
+
+.addComment input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.comment {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.comment:hover {
+  background-color: #007ed6;
+}
+
+.showComment {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showComment .container {
+  background: white;
+  width: 900px;
+  max-width: 95%;
+  height: 70vh;
+  max-height: 90vh;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.showComment .postPic {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 3;
+}
+
+.showComment .postPic img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.showComment .details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ddd;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.showComment .cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.showComment .cardPic img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.showComment .commentSection {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.showComment .comm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.comm{
+  margin-bottom: 10px;
+}
+/*  */
+
+.showComment .commenter {
+  font-weight: 600;
+  font-size: 14px;
+  color: #262626;
+}
+.commenter {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.showComment .commentText {
+  font-size: 14px;
+  color: #555;
+  word-break: break-word;
+  margin-left: 5px;
+}
+.commentText {
+
+  line-height: 1.4;
+
+}
+
+.showComment .cardContent {
+  padding: 12px 16px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.showComment .addComment {
+  display: flex;
+  padding: 12px 16px;
+  border-top: 1px solid #ddd;
+}
+
+.showComment .addComment input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.showComment .comment {
+  margin-left: 10px;
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.showComment .comment:hover {
+  background-color: #007ed6;
+}
+
+.showComment .closeComment {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #444;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.showComment .materialSymbolsOutlinedComment {
+  font-size: 32px;
+}
+
+.commenterPic {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+

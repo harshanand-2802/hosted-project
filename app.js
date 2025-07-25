@@ -21,7 +21,7 @@ const server = http.createServer(app);
 // 4. Initialize socket.io server with CORS config
 const io = new Server(server, {
     cors: {
-        origin: "*", // Allow all origins for production
+        origin: ["https://hosted-project-1.onrender.com"],
         methods: ["GET", "POST", "DELETE"]
     }
 });

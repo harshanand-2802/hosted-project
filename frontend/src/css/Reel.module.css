@@ -1,0 +1,146 @@
+.reelsContainer {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the reel horizontally */
+
+ 
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  /* border-radius: 20px; */
+}
+
+.reelItem {
+  width: 100%;
+  max-width: 500px; /* Adjust to desired reel width similar to Instagram desktop */
+  height: calc(100vh - 15vh); /* Full viewport minus navbar */
+  scroll-snap-align: start;
+  position: relative;
+  background-color: black;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* Center horizontally */
+  /* Add top and bottom margin equal to 100vh each */
+  /* margin-top: 5vh; */
+  margin-bottom: 5vh;
+  border-radius: 20px;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px; /* Optional: gives Instagram-like rounded edges */
+}
+
+.captionContainer {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: white;
+}
+
+.caption {
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+}
+
+.user {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+.deleteButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.deleteButton:hover {
+  background-color: darkred;
+}
+
+.userLink {
+  text-decoration: none;
+  color: inherit;
+}
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  transition: transform 0.2s ease;
+}
+.userInfo:hover {
+  transform: scale(1.02);
+}
+
+.userPhoto {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 500;
+  color:white;
+}
+
+.userBlock {
+  display: flex;
+  flex-direction: column; /* Stack name and delete vertically */
+  align-items: flex-start; /* Align them to the start */
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.captionSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 0 8px;
+}
+
+.actionBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  transition: transform 0.2s;
+}
+
+.iconButton:hover {
+  transform: scale(1.1);
+}
